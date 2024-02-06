@@ -1,8 +1,6 @@
 import React from 'react';
 
 const Launch = ({launch}) => {
-    if (launch.launch_year !== 2020) {
-    }
     return (
         <div>
             <div>mission_name: {launch.mission_name}</div>
