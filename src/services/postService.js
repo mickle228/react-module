@@ -3,7 +3,8 @@ import {urls} from "../constants/urls";
 
 const postService = {
     getAll:  () => apiService.get(urls.posts.base),
-    getById: (id) => apiService.get(urls.posts.byId(id))
+    getById: (id) => apiService.get(urls.posts.byId(id)),
+    getAllById: (id) => apiService.get(urls.posts.AllById(id))
 }
 
 export {

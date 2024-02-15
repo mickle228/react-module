@@ -5,6 +5,7 @@ const posts = '/posts'
 const comments = '/comments'
 
 
+
 const urls = {
     users: {
         base: users,
@@ -12,11 +13,12 @@ const urls = {
     },
     posts: {
         base: posts,
-        byId: (id) => `${posts}/${id}`
+        byId: (id) => `${posts}/${id}`,
+        AllById: (id) => `${users}/${id}/posts`
     },
     comments: {
         base: comments,
-        byId: (id) => `${comments}/${id}`
+        byId: (id) => `${posts}/${id}/comments`
     }
 }
 

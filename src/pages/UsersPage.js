@@ -9,7 +9,7 @@ const UsersPage = () => {
         <div>
             <Users/>
             <hr/>
-            {/*<Outlet/>*/}
+            <Outlet/>
         </div>
     );
 };

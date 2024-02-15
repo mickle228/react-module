@@ -9,7 +9,7 @@ const User = ({user}) => {
         <div>
             <div>id: {id}</div>
             <div>name: {name}</div>
-            <button onClick={() => navigate(id.toString(), {state: {user}})}>getDetails</button>
+            <button onClick={() => navigate(`/user-details/${id}`, {state: {user}})}>getDetails</button>
         </div>
     );
 };
