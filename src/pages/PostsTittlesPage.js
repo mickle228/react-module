@@ -10,13 +10,13 @@ const PostsTittlesPage = () => {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        postService.getAllById(id).then(({data})=> setPosts(data))
+        postService.getAllById(id).then(({data}) => setPosts(data))
     }, [id]);
     return (
         <div>
             <hr/>
             <h1>Posts Titles</h1>
-            {posts.map(post=><PostTittles key={post.id} post={post}/>)}
+            {posts.map(post => <PostTittles key={post.id} post={post}/>)}
             <hr/>
         </div>
     );
