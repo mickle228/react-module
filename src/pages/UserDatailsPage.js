@@ -1,7 +1,7 @@
 import {Outlet, useLocation, useParams} from "react-router-dom";
 
 import {UserDetails} from "../components/UsersContainer/UserDetails";
-import {createContext, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import {userService} from "../services/userService";
 
 const UserDetailsPage = () => {
