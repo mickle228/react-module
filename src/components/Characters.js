@@ -7,17 +7,13 @@ const Characters = ({characterUrls}) => {
 
     useEffect(() => {
         const fetchData = async () => {
-
-            const charactersData = [];
-            for (const url of characterUrls) {
-                const response = await axios.get(url);
-                charactersData.push(response.data);
-            }
-            setCharacters(charactersData);
-
+                const responses = await Promise.all(characterUrls.map(url => axios.get(url)));
+                const charactersData = responses.map(response => response.data);
+                setCharacters(charactersData);
         };
         fetchData();
     }, [characterUrls]);
+
 
     return (
         <div>
